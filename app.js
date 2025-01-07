@@ -78,9 +78,10 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use(["/", "/listings"], listingRoutes);
+app.use("/listings", listingRoutes);
 app.use("/listings/:id/reviews", reviewRoutes);
 app.use("/", userRoutes);
+
 
 // // Root Route
 // app.get("/", (req, res) => {
