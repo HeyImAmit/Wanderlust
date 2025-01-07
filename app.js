@@ -8,16 +8,16 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
-const ExpressError = require("../Wanderlust/utils/ExpressError");
-const listingRoutes = require("../Wanderlust/routes/listing");
-const reviewRoutes = require("../Wanderlust/routes/review");
+const ExpressError = require("./utils/ExpressError");
+const listingRoutes = require("./routes/listing");
+const reviewRoutes = require("./routes/review");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const User = require("../Wanderlust/models/user");
-const userRoutes = require("../Wanderlust/routes/user");
+const User = require("./models/user");
+const userRoutes = require("./routes/user");
 
 // Database connection
 const dbUrl = process.env.ATLASDB_URL;
